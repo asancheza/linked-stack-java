@@ -1,5 +1,6 @@
 class Stack<T> implements StackInterface<T> {
 	private Node<T> head;
+	private Node<T> tail;
 	private int elementCount = 0;
 
 	private class Node<T> {
@@ -13,6 +14,25 @@ class Stack<T> implements StackInterface<T> {
 		node.next = head;
 
 		head = node;
+		elementCount++;
+	}
+
+	public void queue (T value) {
+		Node<T> node = new Node<T>();
+		Node<T> temp = head;
+
+		node.value = value;
+
+		if (!isEmpty()) {
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+
+			temp.next = node;
+		} else {
+			head = node;
+		}
+
 		elementCount++;
 	}
 
