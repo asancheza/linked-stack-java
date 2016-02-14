@@ -1,3 +1,9 @@
+/*
+ * Stack sample
+ * 
+ * @author Alejandro Sanchez Acosta
+ */
+
 public class StackSample {
 	public static void main(String[] args) {
 		System.out.println("Test");
@@ -5,6 +11,8 @@ public class StackSample {
 		StackInterface<Integer> stack = new Stack<Integer>();
 		stack.push(3);
 		stack.push(5);
+
+		System.out.println(stack);
 
 		System.out.println(stack.pop());
 
@@ -15,6 +23,7 @@ public class StackSample {
 		stack2.push("World");
 		stack2.push("Hello");
 		stack2.push("World");
+		stack2.remove(2);
 
 		System.out.println(stack2.pop());
 
