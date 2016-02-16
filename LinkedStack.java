@@ -4,7 +4,7 @@
  * @author Alejandro Sanchez Acosta
  */
 
-class Stack<T> implements StackInterface<T> {
+class LinkedStack<T> implements StackInterface<T> {
 	private Node<T> head;
 	private Node<T> tail;
 	private int elementCount = 0;

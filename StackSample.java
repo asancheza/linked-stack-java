@@ -8,7 +8,7 @@ public class StackSample {
 	public static void main(String[] args) {
 		System.out.println("Test");
 
-		StackInterface<Integer> stack = new Stack<Integer>();
+		StackInterface<Integer> stack = new LinkedStack<Integer>();
 		stack.push(3);
 		stack.push(5);
 
@@ -16,7 +16,7 @@ public class StackSample {
 
 		System.out.println(stack.pop());
 
-		StackInterface<String> stack2 = new Stack<String>();
+		StackInterface<String> stack2 = new LinkedStack<String>();
 		stack2.push("Hello");
 		stack2.push("World");
 		stack2.push("Hello");
@@ -33,7 +33,7 @@ public class StackSample {
 			System.out.println(stack2.pop());
 		}
 
-		StackInterface<Integer> stack3 = new Stack<Integer>();
+		StackInterface<Integer> stack3 = new LinkedStack<Integer>();
 		stack3.queue(3);
 		stack3.queue(5);
 		stack3.queue(7);
