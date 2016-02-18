@@ -89,6 +89,7 @@ class ArrayStack<T> implements StackInterface<T> {
    * Clear stack
    */
 	public void clear() {
+		data = (T[]) new Object[CAPACITY];
 		count = 0;
 	}
 
@@ -105,16 +106,37 @@ class ArrayStack<T> implements StackInterface<T> {
 		return str;
 	}
 
+	/* 
+   * Double array capacity in stack
+   */
 	private void doubleArrayCapacity() {
 		@SuppressWarnings("unchecked")
-		T[] copy = (T[]) new Object[this.data.length * 2];
+		T[] copy = (T[]) new Object[data.length * 2];
 
 		for (int i = 0; i < count; i++) {
-			copy[i] = this.data[i];
+			copy[i] = data[i];
 		}
 
-		this.data = copy;
+		data = copy;
 
 		System.out.println("Doubled capacity: "+ data.length * 2);
+	}
+
+	/* 
+	 * Filter elements in the stack
+	 */
+	public void filter (T value) {
+		ArrayStack<T> temp = new ArrayStack<>();
+
+		while (!isEmpty()) {
+			T v = pop();
+			if (v != value) {
+				temp.push(v);
+			}
+		}
+
+		while (!temp.isEmpty()) {
+			push(temp.pop());
+		}
 	}
 }

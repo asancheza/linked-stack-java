@@ -142,4 +142,23 @@ class LinkedStack<T> implements StackInterface<T> {
 
 		return str;
 	}
+
+	/* 
+	 * Filter elements in the stack
+	 */
+	public void filter (T value) {
+		LinkedStack<T> temp = new LinkedStack<>();
+
+		while (!isEmpty()) {
+			//temp.push(pop());
+			T v = pop();
+			if (v != value) {
+				temp.push(v);
+			}
+		}
+
+		while (!temp.isEmpty()) {
+			push(temp.pop());
+		}
+	}
 }

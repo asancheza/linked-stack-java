@@ -1,0 +1,2 @@
+Dedicated 2 hours to make the stack implementation, the code works in the StackSample.
+Probably would be interesting to discuss in class the basic error cases for improving (head is null, etc).
