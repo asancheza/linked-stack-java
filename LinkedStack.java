@@ -161,4 +161,15 @@ class LinkedStack<T> implements StackInterface<T> {
 			push(temp.pop());
 		}
 	}
+
+	/* 
+	 * Reverse stack
+	 */
+	public void reverse() {
+		LinkedStack<T> t1 = new LinkedStack<>();
+
+		while (!isEmpty()) t1.push(pop());
+
+		head = t1.head;
+	}
 }

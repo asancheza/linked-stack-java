@@ -139,4 +139,15 @@ class ArrayStack<T> implements StackInterface<T> {
 			push(temp.pop());
 		}
 	}
+
+	/* 
+	 * Reverse stack
+	 */
+	public void reverse() {
+		ArrayStack<T> t1 = new ArrayStack<>();
+
+		while (!isEmpty()) t1.push(pop());
+
+		data = t1.data;
+	}
 }
