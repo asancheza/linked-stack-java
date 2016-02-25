@@ -48,9 +48,9 @@ class ArrayStack<T> implements StackInterface<T> {
 		return this.data[count-1];
 	}
    
-  /*
-   * Returns top value in stack
-   */
+  	/*
+   	 * Returns top value in stack
+   	*/
 	public T peek() {
 		return this.data[count-1];
 	}
@@ -58,7 +58,7 @@ class ArrayStack<T> implements StackInterface<T> {
 	/*
 	 * Returns the element below the top element, or throws an 
 	 * exception if there are less than two elements
-   */
+   	 */
 	public T peek2() {
 		if (count <= 2)
 			throw new IllegalArgumentException("Not enough elements");
@@ -68,7 +68,7 @@ class ArrayStack<T> implements StackInterface<T> {
 
 	/*
 	 * Check if stack is empty
-   */
+   	 */
 	public boolean isEmpty() {
 		if (count == 0)
 			return true;
@@ -85,17 +85,17 @@ class ArrayStack<T> implements StackInterface<T> {
 		}
 	}
 
-  /*
-   * Clear stack
-   */
+  	/*
+   	 * Clear stack
+   	 */
 	public void clear() {
 		data = (T[]) new Object[CAPACITY];
 		count = 0;
 	}
 
-  /* 
-   * Print in a string all the values from stack
-   */
+  	/* 
+   	 * Print in a string all the values from stack
+   	 */
 	public String toString() {
 		String str = "";
 
@@ -107,8 +107,8 @@ class ArrayStack<T> implements StackInterface<T> {
 	}
 
 	/* 
-   * Double array capacity in stack
-   */
+   	 * Double array capacity in stack
+   	 */
 	private void doubleArrayCapacity() {
 		@SuppressWarnings("unchecked")
 		T[] copy = (T[]) new Object[data.length * 2];
