@@ -9,9 +9,9 @@ class LinkedStack<T> implements StackInterface<T> {
 	private Node<T> tail;
 	private int elementCount = 0;
 
-  /* 
-   * Node class
-   */
+  	/* 
+   	* Node class
+   	*/
 	private class Node<T> {
 		T value;
 		Node<T> next;
@@ -74,9 +74,9 @@ class LinkedStack<T> implements StackInterface<T> {
 		return value;
 	}
    
-  /*
-   * Returns top value in stack
-   */
+  	/*
+   	 * Returns top value in stack
+   	 */
 	public T peek() {
 		if (head == null)
 			return null;
@@ -87,7 +87,7 @@ class LinkedStack<T> implements StackInterface<T> {
 	/*
 	 * Returns the element below the top element, or throws an 
 	 * exception if there are less than two elements
-   */
+   	 */
 	public T peek2() {
 		if (elementCount <= 2)
 			throw new IllegalArgumentException("Not enough elements");
@@ -103,7 +103,7 @@ class LinkedStack<T> implements StackInterface<T> {
 
 	/*
 	 * Check if stack is empty
-   */
+   	 */
 	public boolean isEmpty() {
 		if (elementCount == 0)
 			return true;
@@ -120,17 +120,17 @@ class LinkedStack<T> implements StackInterface<T> {
 		}
 	}
 
-  /*
-   * Clear stack
-   */
+  	/*
+   	 * Clear stack
+   	 */
 	public void clear() {
 		elementCount = 0;
 		head = null;
 	}
 
-  /* 
-   * Print in a string all the values from stack
-   */
+  	/* 
+   	 * Print in a string all the values from stack
+   	 */
 	public String toString() {
 		Node<T> temp = head;
 		String str = "";   
